@@ -1,0 +1,115 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#f8e8f1">
+  <title>Un día especial para Gianella 💗</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div id="sky"></div>
+
+<main>
+<article class="card">
+
+  <div class="controls">
+    <button class="sound" id="soundBtn">♫ Activar música</button>
+  </div>
+
+  <!-- PANTALLA 1 -->
+  <section class="screen active" id="s1">
+    <div class="flower">🌷</div>
+    <div class="eyebrow">Un detalle hecho con cariño</div>
+
+    <h1>¡Feliz cumpleaños,<br>Gianella!</h1>
+
+    <p class="script">
+      Hoy es un día para celebrar lo bonita que es la vida
+      y todas las cosas buenas que están por venir.
+    </p>
+
+    <div class="rule"></div>
+
+    <p>Preparé algo especial para ti.<br>
+      ¿Te gustaría descubrirlo?</p>
+
+    <button onclick="go(2)">Descubrir sorpresa ✨</button>
+
+    <p class="small">CON MUCHO CARIÑO · PARA GIANELLA</p>
+  </section>
+
+  <!-- PANTALLA 2 -->
+  <section class="screen" id="s2">
+    <div class="eyebrow">¡Llegó el momento!</div>
+    <h2>Un deseo para ti 🎂</h2>
+
+    <p>
+      Que nunca te falten motivos para sonreír,
+      sueños por cumplir y personas bonitas
+      que hagan tus días especiales.
+    </p>
+
+    <div class="cake-wrap" id="cakeWrap">
+      <div class="cake">
+        <div class="plate"></div>
+        <div class="tier"></div>
+        <div class="dots">• • •</div>
+        <div class="candle"></div>
+        <div class="flame"></div>
+      </div>
+    </div>
+
+    <p class="wish" id="wishText">
+      Cierra los ojos un instante y pide un deseo...
+    </p>
+
+    <button id="wishBtn" onclick="makeWish()">
+      Pedir un deseo ✨
+    </button>
+
+    <button class="secondary" id="toEnvelope"
+      style="display:none" onclick="go(3)">
+      Abrir tu carta 💌
+    </button>
+  </section>
+
+  <!-- PANTALLA 3 -->
+  <section class="screen" id="s3">
+    <div class="eyebrow">Unas palabras para ti</div>
+    <h2>Una carta especial 💌</h2>
+
+    <p>Toca el sobre para descubrir tu dedicatoria.</p>
+
+    <div class="envelope" id="envelope"
+      onclick="openEnvelope()">
+      <div class="envelope-heart">💗</div>
+    </div>
+
+    <div class="final-note" id="finalNote" style="display:none">
+      <div class="letter" id="finalDedication"></div>
+
+      <p class="signature" id="signature" style="display:none">
+        Att: JValentin
+      </p>
+    </div>
+
+    <p class="small" id="endLine" style="display:none">
+      HECHO CON MUCHO CARIÑO
+    </p>
+  </section>
+
+</article>
+</main>
+
+<!-- REPRODUCTOR DE MÚSICA LOCAL -->
+<audio id="backgroundMusic" loop preload="auto">
+  <source src="./musica.mp3" type="audio/mpeg">
+  Tu navegador no admite audio.
+</audio>
+
+<script src="script.js"></script>
+</body>
+</html>
